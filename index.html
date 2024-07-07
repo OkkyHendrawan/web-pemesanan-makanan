@@ -1,0 +1,63 @@
+<!--
+    Dibuat oleh : Okky Hendrawan - 1462200279 - Kelas R
+    Dibuat pada : Jumat, 14 Maret 2024 11:40
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Makanan</title>
+    <link rel="stylesheet" href="style.css"> <!-- connect ke file css -->
+</head>
+<body>
+    <div class="container">
+        <h2>Menu Pesanan</h2>
+        <div id="menu">
+            <h3>Makanan :</h3>
+            <select id="food-menu" onchange="updateFoodPrice(); resetFoodQuantity()">
+                <option value="12000">Bakso</option>
+                <option value="15000">Soto</option>
+                <option value="10000">Rawon</option>
+                <option value="13000">Sop</option>
+                <option value="14000">Ayam Geprek</option>
+                <option value="17000">Nasi Goreng</option>
+            </select>
+            <span id="food-price">Rp. 12000</span>
+            <h3>Minuman :</h3>
+            <select id="drink-menu" onchange="updateDrinkPrice(); resetDrinkQuantity()">
+                <option value="5000">Teh Manis</option>
+                <option value="7000">Es Milo</option>
+                <option value="4000">Kopi</option>
+                <option value="8000">Es Degan</option>
+                <option value="6000">Es Oyen</option>
+                <option value="15000">Es Campur</option>
+            </select>
+            <span id="drink-price">Rp. 5000</span>
+        </div>
+        <div id="order">
+            <h3> Jumlah Pesanan :</h3>
+            <div>
+                <label for="food-quantity">Berapa Porsi Makanan :</label>
+                <input type="number" id="food-quantity" value="0">
+            </div>
+            <div>
+                <label for="drink-quantity">Berapa Porsi Minuman :</label>
+                <input type="number" id="drink-quantity" value="0">
+            </div>
+            <button id="add-to-cart-btn">Tambah ke Keranjang</button> <!-- Tombol untuk menambahkan pesanan ke keranjang pesanan-->
+            <h3>Keranjang Pesanan :</h3>
+            <div id="cart"></div> <!-- Kontainer untuk menampilkan pesanan yang telah ditambahkan ke keranjang pesanan -->
+            <h3>Total Pembayaran :</h3>
+            <p id="total-bill">Rp. 0</p>
+            <div>
+                <label for="payment">Dibayar :</label>
+                <input type="number" id="payment">
+            </div>
+            <p id="change">Kembalian: Rp. 0</p>
+            <button id="calculate-change-btn">Pembayaran</button>
+        </div>
+    </div>
+    <script src="script.js"></script> <!--connect ke file javascript-->
+</body>
+</html>
